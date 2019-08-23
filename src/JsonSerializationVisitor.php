@@ -106,7 +106,7 @@ final class JsonSerializationVisitor extends AbstractVisitor implements Serializ
         return $rs;
     }
 
-    public function startVisitingObject(ClassMetadata $metadata, object $data, array $type): void
+    public function startVisitingObject(ClassMetadata $metadata, \object $data, array $type): void
     {
         \array_push($this->dataStack, $this->data);
         $this->data = true === $metadata->isMap ? new \ArrayObject() : [];
@@ -115,7 +115,7 @@ final class JsonSerializationVisitor extends AbstractVisitor implements Serializ
     /**
      * @return array|\ArrayObject
      */
-    public function endVisitingObject(ClassMetadata $metadata, object $data, array $type)
+    public function endVisitingObject(ClassMetadata $metadata, \object $data, array $type)
     {
         $rs = $this->data;
         $this->data = \array_pop($this->dataStack);
