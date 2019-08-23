@@ -142,7 +142,7 @@ final class JsonDeserializationVisitor extends AbstractVisitor implements Deseri
     /**
      * {@inheritdoc}
      */
-    public function startVisitingObject(ClassMetadata $metadata, object $object, array $type): void
+    public function startVisitingObject(ClassMetadata $metadata, \object $object, array $type): void
     {
         $this->setCurrentObject($object);
     }
