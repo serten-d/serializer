@@ -219,7 +219,7 @@ final class XmlSerializationVisitor extends AbstractVisitor implements Serializa
     /**
      * {@inheritdoc}
      */
-    public function startVisitingObject(ClassMetadata $metadata, object $data, array $type): void
+    public function startVisitingObject(ClassMetadata $metadata, \object $data, array $type): void
     {
         $this->objectMetadataStack->push($metadata);
 
@@ -350,7 +350,7 @@ final class XmlSerializationVisitor extends AbstractVisitor implements Serializa
         return !$element->hasChildNodes() && !$element->hasAttributes();
     }
 
-    public function endVisitingObject(ClassMetadata $metadata, object $data, array $type): void
+    public function endVisitingObject(ClassMetadata $metadata, \object $data, array $type): void
     {
         $this->objectMetadataStack->pop();
     }
