@@ -269,7 +269,7 @@ final class XmlDeserializationVisitor extends AbstractVisitor implements NullAwa
         }
     }
 
-    public function startVisitingObject(ClassMetadata $metadata, object $object, array $type): void
+    public function startVisitingObject(ClassMetadata $metadata, \object $object, array $type): void
     {
         $this->setCurrentObject($object);
         $this->objectMetadataStack->push($metadata);
