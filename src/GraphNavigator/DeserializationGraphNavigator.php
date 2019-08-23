@@ -233,7 +233,7 @@ final class DeserializationGraphNavigator extends GraphNavigator implements Grap
         return $this->metadataFactory->getMetadataForClass($metadata->discriminatorMap[$typeValue]);
     }
 
-    private function afterVisitingObject(ClassMetadata $metadata, object $object, array $type): void
+    private function afterVisitingObject(ClassMetadata $metadata, \object $object, array $type): void
     {
         $this->context->decreaseDepth();
         $this->context->popClassMetadata();
