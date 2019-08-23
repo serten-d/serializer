@@ -248,7 +248,7 @@ final class SerializationGraphNavigator extends GraphNavigator implements GraphN
         }
     }
 
-    private function afterVisitingObject(ClassMetadata $metadata, object $object, array $type): void
+    private function afterVisitingObject(ClassMetadata $metadata, \object $object, array $type): void
     {
         $this->context->stopVisiting($object);
         $this->context->popClassMetadata();
