@@ -79,7 +79,7 @@ interface DeserializationVisitorInterface extends VisitorInterface
      *
      * @param array $type
      */
-    public function startVisitingObject(ClassMetadata $metadata, object $data, array $type): void;
+    public function startVisitingObject(ClassMetadata $metadata, \object $data, array $type): void;
 
     /**
      * @param mixed $data
