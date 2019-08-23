@@ -73,7 +73,7 @@ interface SerializationVisitorInterface extends VisitorInterface
      * @param mixed $data
      * @param array $type
      */
-    public function startVisitingObject(ClassMetadata $metadata, object $data, array $type): void;
+    public function startVisitingObject(ClassMetadata $metadata, \object $data, array $type): void;
 
     /**
      * @param mixed $data
@@ -88,5 +88,5 @@ interface SerializationVisitorInterface extends VisitorInterface
      *
      * @return array|\ArrayObject
      */
-    public function endVisitingObject(ClassMetadata $metadata, object $data, array $type);
+    public function endVisitingObject(ClassMetadata $metadata, \object $data, array $type);
 }
